@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kiersten Lee — builder, creator, and AI systems thinker. Projects spanning healthcare tools, content distribution, and automated media." />
+  <title>Kiersten Lee</title>
+  <style>
+    :root {
+      --bg:       #0a0e1a;
+      --surface:  #111827;
+      --border:   #1f2937;
+      --teal:     #2dd4bf;
+      --teal-dim: #0d9488;
+      --white:    #f9fafb;
+      --muted:    #9ca3af;
+      --tag-bg:   #1a2535;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ── Nav ── */
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 0;
+    }
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-name {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: -0.01em;
+      color: var(--white);
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.9rem;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--white); text-decoration: none; }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 5rem 0 3.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.65;
+    }
+    .hero-sub strong { color: var(--white); font-weight: 600; }
+
+    /* ── Projects ── */
+    .section {
+      padding: 3.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal-dim);
+      margin-bottom: 2rem;
+    }
+
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.75rem;
+      transition: border-color 0.2s;
+    }
+    .project-card:hover { border-color: var(--teal-dim); }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .project-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+    .project-link {
+      font-size: 0.8rem;
+      color: var(--teal);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .project-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+    .project-desc strong { color: var(--white); font-weight: 600; }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .tag {
+      background: var(--tag-bg);
+      color: var(--teal);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.6rem;
+      border-radius: 99px;
+      border: 1px solid var(--border);
+    }
+
+    /* ── About ── */
+    .about-body {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.75;
+      max-width: 600px;
+    }
+    .about-body strong { color: var(--white); font-weight: 600; }
+    .about-body p + p { margin-top: 1rem; }
+
+    /* ── Footer ── */
+    footer {
+      padding: 2.5rem 0;
+    }
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .footer-left {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .footer-links {
+      display: flex;
+      gap: 1.25rem;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .footer-links a:hover { color: var(--teal); }
+
+    /* ── Responsive ── */
+    @media (max-width: 520px) {
+      .hero { padding: 3.5rem 0 2.5rem; }
+      .nav-links { gap: 1rem; }
+      .project-card { padding: 1.25rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <span class="nav-name">Kiersten Lee</span>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="https://github.com/LicketySnicketty222" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <p class="hero-eyebrow">Builder &amp; Creator</p>
+        <h1>Kiersten Lee</h1>
+        <p class="hero-sub">
+          I build <strong>real tools and systems</strong> — a healthcare app patients use today,
+          a content distribution platform, and an AI-powered media pipeline.
+          I work at the intersection of <strong>technology, community, and creation</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="section-label">Projects</p>
+        <div class="project-list">
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-name">Clinic Wait Time App</span>
+              <a class="project-link" href="https://github.com/LicketySnicketty222/clinic-wait-time" target="_blank" rel="noopener">View code →</a>
+            </div>
+            <p class="project-desc">
+              A <strong>live healthcare tool</strong> for clinic patients and staff. Patients see the current estimated wait time in under 30 seconds — no account, no friction. Staff manage the queue through an internal dashboard with a live tally system, override controls, and configurable operating hours. Built with accessibility in mind: WCAG AA color contrast, screen reader support, and keyboard navigation throughout.
+            </p>
+            <div class="tags">
+              <span class="tag">Live Product</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Accessibility</span>
+              <span class="tag">Real-time</span>
+              <span class="tag">Vanilla JS</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-name">Navigator</span>
+              <a class="project-link" href="https://www.gonavigator.org" target="_blank" rel="noopener">Visit site →</a>
+            </div>
+            <p class="project-desc">
+              An <strong>independent content distribution platform</strong> built to give creators direct control over how their work reaches audiences — outside of traditional gatekeepers.
+            </p>
+            <div class="tags">
+              <span class="tag">Content Platform</span>
+              <span class="tag">Distribution</span>
+              <span class="tag">Independent Media</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-name">Automated YouTube Pipeline</span>
+            </div>
+            <p class="project-desc">
+              A <strong>fully automated content system</strong> that uses AI to research, script, produce, and publish YouTube videos without manual intervention. Built in Python, the pipeline handles every step from topic selection to upload — an end-to-end demonstration of agentic AI applied to real media production.
+            </p>
+            <div class="tags">
+              <span class="tag">AI Automation</span>
+              <span class="tag">Python</span>
+              <span class="tag">Agentic Pipeline</span>
+              <span class="tag">YouTube API</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section-label">About</p>
+        <div class="about-body">
+          <p>
+            I build with AI as a tool — not a novelty. My work spans <strong>healthcare technology</strong>,
+            <strong>content infrastructure</strong>, and <strong>automated media systems</strong>.
+            Each project I ship solves a real problem for real people.
+          </p>
+          <p>
+            I'm drawn to the places where technology meets community:
+            building systems that let independent creators distribute their work freely,
+            tools that reduce friction in healthcare, and pipelines that make
+            high-quality content creation more accessible.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <span class="footer-left">Kiersten Lee</span>
+      <ul class="footer-links">
+        <li><a href="https://github.com/LicketySnicketty222" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.gonavigator.org" target="_blank" rel="noopener">Navigator</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
