@@ -1,335 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Kiersten Lee — builder, creator, and AI systems thinker. Projects spanning healthcare tools, content distribution, and automated media." />
-  <title>Kiersten Lee</title>
-  <style>
-    :root {
-      --bg:       #0a0e1a;
-      --surface:  #111827;
-      --border:   #1f2937;
-      --teal:     #2dd4bf;
-      --teal-dim: #0d9488;
-      --white:    #f9fafb;
-      --muted:    #9ca3af;
-      --tag-bg:   #1a2535;
-    }
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kiersten Lee — AI Systems Builder</title>
+<meta name="description" content="Kiersten Lee builds practical AI systems with Claude. Stanford STS, M.S. Marketing, NCAA D1 athlete. Atlanta, GA.">
+<style>
+:root{--ink:#1a1a1a;--muted:#5b5b5b;--accent:#7a2e1f;--line:#e6dcd8;--bg:#fbf9f7}
+*{box-sizing:border-box}body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+header{padding:72px 0 40px;border-bottom:1px solid var(--line)}
+h1{font-size:44px;letter-spacing:.02em;margin:0 0 8px}
+.tag{font-size:18px;color:var(--muted);margin:0 0 20px}
+.links a{color:var(--accent);margin-right:18px;font-weight:600;text-decoration:none}
+h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:56px 0 18px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0 0}
+.stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px}
+.stat b{display:block;font-size:24px}.stat span{font-size:13px;color:var(--muted)}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;margin-bottom:18px}
+.card h3{margin:0 0 6px;font-size:21px}.meta{font-size:13px;color:var(--muted);margin-bottom:10px}
+.card img{width:100%;border-radius:8px;border:1px solid var(--line);margin:12px 0 4px}
+.cap{font-size:12px;color:var(--muted)}
+.chips span{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 10px;margin:8px 6px 0 0;color:var(--muted)}
+.card a{color:var(--accent);font-weight:600;text-decoration:none}
+ul{padding-left:20px}footer{margin:64px 0 40px;font-size:13px;color:var(--muted)}
+@media(max-width:640px){h1{font-size:34px}.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
+<header><div class="wrap">
+<h1>Kiersten Lee</h1>
+<p class="tag">I build practical AI systems with Claude, and I decide carefully where a person needs to stay involved.<br>Stanford B.A. (Science, Technology &amp; Society) · M.S. Marketing · NCAA Division I athlete · Atlanta, GA</p>
+<div class="links"><a href="mailto:kierstenjlee@alumni.stanford.edu">Email</a><a href="https://linkedin.com/in/kierstenjlee">LinkedIn</a><a href="https://github.com/LicketySnicketty222">GitHub</a></div>
+<div class="stats">
+<div class="stat"><b>38K+</b><span>community members on Threads</span></div>
+<div class="stat"><b>9,849</b><span>posts in 14 months</span></div>
+<div class="stat"><b>2.27M</b><span>impressions</span></div>
+<div class="stat"><b>7</b><span>AI projects built</span></div>
+</div>
+</div></header>
+<main class="wrap">
+<h2>Projects</h2>
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<div class="card"><h3>AI Content Engine</h3><div class="meta">Multi-client app · Python · Claude · 2026</div>
+<p>A content app for small businesses: it drafts posts in each brand's voice, routes everything through human approval, and keeps AI costs under control.</p>
+<a href="https://github.com/LicketySnicketty222/ai-content-engine">Product overview →</a>
+<div class="chips"><span>Python</span><span>Claude</span></div></div>
 
-    html { scroll-behavior: smooth; }
+<div class="card"><h3>Loquia</h3><div class="meta">macOS app · Python · on-device AI · 2026</div>
+<p>A private dictation app: speech recognition runs entirely on the Mac with local Whisper, and a deny-by-default network policy, enforced at the socket level, keeps audio and text from leaving the device. Per-app formatting, custom vocabulary, and 48 automated tests.</p>
+<div class="chips"><span>Python</span><span>Whisper</span><span>Privacy</span></div></div>
 
-    body {
-      background: var(--bg);
-      color: var(--white);
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      line-height: 1.6;
-      min-height: 100vh;
-    }
+<div class="card"><h3>Community Content Engine</h3><div class="meta">Founder · April 2025 – present</div>
+<p>I founded an online faith community and built the AI system that helps keep it running every day, drafting posts in the community's voice and scheduling them across platforms.</p>
+<ul><li>0 to 38,000+ members on Threads in 14 months (50,000+ across platforms); 2.27M impressions and 156K interactions, analytics-verified</li>
+<li>9,849 posts published in 14 months while competing as a Division I athlete</li>
+<li>Review rule: routine encouragement posts publish automatically; anything involving money, products, launches, or disclosures waits for my approval</li></ul>
+<div class="chips"><span>Claude</span><span>Automation</span></div></div>
 
-    a { color: var(--teal); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+<div class="card"><h3>AI Phone Receptionist</h3><div class="meta">ElevenLabs · Twilio · 2026</div>
+<p>An AI receptionist designed for a Georgia home-healthcare agency: system prompt, knowledge base, six tool specs, a Twilio deployment plan, and 12 test-call scenarios.</p>
+<a href="https://github.com/LicketySnicketty222/divinity-healthcare-elevenlabs-agent">View on GitHub →</a>
+<div class="chips"><span>ElevenLabs</span><span>Twilio</span><span>Prompt design</span></div></div>
 
-    /* ── Layout ── */
-    .container {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
+<div class="card"><h3>Clinic Wait Time</h3><div class="meta">Web app prototype · Supabase · 2026</div>
+<p>Shows patients a clinic's current wait with no login, and gives staff a dashboard with one-tap tallies, manual overrides, and open/closed controls. Built to WCAG AA with an in-browser test suite.</p>
+<a href="https://github.com/LicketySnicketty222/clinic-wait-time">View on GitHub →</a>
+<div class="chips"><span>JavaScript</span><span>Supabase</span><span>Accessibility</span></div></div>
 
-    /* ── Nav ── */
-    nav {
-      border-bottom: 1px solid var(--border);
-      padding: 1.25rem 0;
-    }
-    nav .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .nav-name {
-      font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: -0.01em;
-      color: var(--white);
-    }
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-    }
-    .nav-links a {
-      color: var(--muted);
-      font-size: 0.9rem;
-      transition: color 0.15s;
-    }
-    .nav-links a:hover { color: var(--white); text-decoration: none; }
-
-    /* ── Hero ── */
-    .hero {
-      padding: 5rem 0 3.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .hero-eyebrow {
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: 1rem;
-    }
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      line-height: 1.05;
-      color: var(--white);
-      margin-bottom: 1.25rem;
-    }
-    .hero-sub {
-      font-size: 1.15rem;
-      color: var(--muted);
-      max-width: 520px;
-      line-height: 1.65;
-    }
-    .hero-sub strong { color: var(--white); font-weight: 600; }
-
-    /* ── Projects ── */
-    .section {
-      padding: 3.5rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .section-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--teal-dim);
-      margin-bottom: 2rem;
-    }
-
-    .project-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .project-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 1rem;
-      padding: 1.75rem;
-      transition: border-color 0.2s;
-    }
-    .project-card:hover { border-color: var(--teal-dim); }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 0.6rem;
-      flex-wrap: wrap;
-    }
-    .project-name {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: -0.01em;
-    }
-    .project-link {
-      font-size: 0.8rem;
-      color: var(--teal);
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .project-desc {
-      color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.65;
-      margin-bottom: 1rem;
-    }
-    .project-desc strong { color: var(--white); font-weight: 600; }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-    .tag {
-      background: var(--tag-bg);
-      color: var(--teal);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      padding: 0.25rem 0.6rem;
-      border-radius: 99px;
-      border: 1px solid var(--border);
-    }
-
-    /* ── About ── */
-    .about-body {
-      color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.75;
-      max-width: 600px;
-    }
-    .about-body strong { color: var(--white); font-weight: 600; }
-    .about-body p + p { margin-top: 1rem; }
-
-    /* ── Footer ── */
-    footer {
-      padding: 2.5rem 0;
-    }
-    footer .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-    .footer-left {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-    .footer-links {
-      display: flex;
-      gap: 1.25rem;
-      list-style: none;
-    }
-    .footer-links a {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-    .footer-links a:hover { color: var(--teal); }
-
-    /* ── Responsive ── */
-    @media (max-width: 520px) {
-      .hero { padding: 3.5rem 0 2.5rem; }
-      .nav-links { gap: 1rem; }
-      .project-card { padding: 1.25rem; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { transition: none !important; }
-    }
-  </style>
-</head>
-<body>
-
-  <nav>
-    <div class="container">
-      <span class="nav-name">Kiersten Lee</span>
-      <ul class="nav-links">
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="https://github.com/LicketySnicketty222" target="_blank" rel="noopener">GitHub</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main>
-
-    <section class="hero">
-      <div class="container">
-        <p class="hero-eyebrow">Builder &amp; Creator</p>
-        <h1>Kiersten Lee</h1>
-        <p class="hero-sub">
-          I build <strong>real tools and systems</strong> — a healthcare app patients use today,
-          a content distribution platform, and an AI-powered media pipeline.
-          I work at the intersection of <strong>technology, community, and creation</strong>.
-        </p>
-      </div>
-    </section>
-
-    <section class="section" id="projects">
-      <div class="container">
-        <p class="section-label">Projects</p>
-        <div class="project-list">
-
-          <div class="project-card">
-            <div class="project-header">
-              <span class="project-name">Clinic Wait Time App</span>
-              <a class="project-link" href="https://github.com/LicketySnicketty222/clinic-wait-time" target="_blank" rel="noopener">View code →</a>
-            </div>
-            <p class="project-desc">
-              A <strong>live healthcare tool</strong> for clinic patients and staff. Patients see the current estimated wait time in under 30 seconds — no account, no friction. Staff manage the queue through an internal dashboard with a live tally system, override controls, and configurable operating hours. Built with accessibility in mind: WCAG AA color contrast, screen reader support, and keyboard navigation throughout.
-            </p>
-            <div class="tags">
-              <span class="tag">Live Product</span>
-              <span class="tag">Supabase</span>
-              <span class="tag">Accessibility</span>
-              <span class="tag">Real-time</span>
-              <span class="tag">Vanilla JS</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-header">
-              <span class="project-name">Navigator</span>
-              <a class="project-link" href="https://www.gonavigator.org" target="_blank" rel="noopener">Visit site →</a>
-            </div>
-            <p class="project-desc">
-              An <strong>independent content distribution platform</strong> built to give creators direct control over how their work reaches audiences — outside of traditional gatekeepers.
-            </p>
-            <div class="tags">
-              <span class="tag">Content Platform</span>
-              <span class="tag">Distribution</span>
-              <span class="tag">Independent Media</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-header">
-              <span class="project-name">Automated YouTube Pipeline</span>
-            </div>
-            <p class="project-desc">
-              A <strong>fully automated content system</strong> that uses AI to research, script, produce, and publish YouTube videos without manual intervention. Built in Python, the pipeline handles every step from topic selection to upload — an end-to-end demonstration of agentic AI applied to real media production.
-            </p>
-            <div class="tags">
-              <span class="tag">AI Automation</span>
-              <span class="tag">Python</span>
-              <span class="tag">Agentic Pipeline</span>
-              <span class="tag">YouTube API</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container">
-        <p class="section-label">About</p>
-        <div class="about-body">
-          <p>
-            I build with AI as a tool — not a novelty. My work spans <strong>healthcare technology</strong>,
-            <strong>content infrastructure</strong>, and <strong>automated media systems</strong>.
-            Each project I ship solves a real problem for real people.
-          </p>
-          <p>
-            I'm drawn to the places where technology meets community:
-            building systems that let independent creators distribute their work freely,
-            tools that reduce friction in healthcare, and pipelines that make
-            high-quality content creation more accessible.
-          </p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container">
-      <span class="footer-left">Kiersten Lee</span>
-      <ul class="footer-links">
-        <li><a href="https://github.com/LicketySnicketty222" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://www.gonavigator.org" target="_blank" rel="noopener">Navigator</a></li>
-      </ul>
-    </div>
-  </footer>
-
-</body>
-</html>
+<h2>Background</h2>
+<p><b>Stanford University</b>, B.A. Science, Technology &amp; Society (2024): AI ethics, Python, decision analysis, networks, misinformation.<br>
+<b>Georgia State University</b>, M.S. Marketing (2025): marketing analytics, social media intelligence, buyer behavior.<br>
+<b>Anthropic courses:</b> Claude 101, Claude Code 101, Intro to MCP, AI Fluency (Framework &amp; Foundations, for Builders, for Small Businesses, for Nonprofits).</p>
+</main>
+<footer class="wrap">© 2026 Kiersten Lee</footer>
+</body></html>
